@@ -19,6 +19,10 @@ const HW6 = () => {
     }
     const restore = () => {
         // делают студенты
+        let newValue = localStorage.getItem('hw6-editable-span-value')
+        newValue?
+            setValue(newValue)
+            :setValue('')
 
     }
 
@@ -37,6 +41,7 @@ const HW6 = () => {
                             id: 'hw6-editable-span',
                             defaultText: 'enter text...',
                         }}
+
                     />
                 </div>
 
