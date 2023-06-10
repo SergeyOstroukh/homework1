@@ -3,6 +3,7 @@ import SuperSelect from './common/c5-SuperSelect/SuperSelect'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
 import s2 from '../../s1-main/App.module.css'
 import s from './HW7.module.css'
+import exp from "constants";
 
 /*
 * 1 - в файле SuperSelect.tsx дописать логику функции onChangeCallback
@@ -10,6 +11,12 @@ import s from './HW7.module.css'
 * 3 - в файле SuperRadio.tsx дописать name, checked, value (узнать для чего в радио name)
 * 4 - сделать стили в соответствии с дизайном
 * */
+
+
+export type arrType={
+    id:number
+    value:string|number
+}
 
 const arr = [
     { id: 1, value: 'x' },
