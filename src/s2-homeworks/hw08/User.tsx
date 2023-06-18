@@ -15,7 +15,7 @@ const User: React.FC<UserPropsType> = ({ u }) => {
 
             </td>
             <td id={'hw8-user-age-' + u._id}>
-                {/*отобразить возраст*/}{u._id}
+                {/*отобразить возраст*/}{u.age}
 
             </td>
         </tr>
