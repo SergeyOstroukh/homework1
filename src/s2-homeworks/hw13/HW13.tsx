@@ -43,19 +43,20 @@ const HW13 = () => {
 
             })
             .catch((e) => {
+                console.log(e)
                 switch (e.response.status){
                     case 500:
-                        setCode(e.data.response.status)
+                        setCode(e.response.status)
                         setImage(error500)
-                        setText(e.data.errorText)
-                        setInfo(e.data.info)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                         break
 
                     case 400:
-                        setCode(e.data.response.status)
+                        setCode(e.response.status)
                         setImage(error400)
-                        setText(e.data.errorText)
-                        setInfo(e.data.info)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                         break
 
                     default:
@@ -63,7 +64,7 @@ const HW13 = () => {
                         setImage(errorUnknown)
                         setText(e.message)
                         setInfo(e.name)
-
+                        break
                 }
                 // дописать
 
