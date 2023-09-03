@@ -15,7 +15,7 @@ import {useSearchParams} from 'react-router-dom'
 
 const getTechs = (find: string) => {
     return axios
-        .get<{ techs: string[] }>(
+        .get<{ techs: string[]},any>(
             'https://samurai.it-incubator.io/api/3.0/homework/test2',
             {params: {find}}
         )
@@ -35,9 +35,9 @@ const HW14 = () => {
         getTechs(value)
             .then((res) => {
                 // делает студент
-
+                 setTechs(res.data.techs)                           // менял
                 // сохранить пришедшие данные
-
+                setLoading(false)
                 //
             })
     }
@@ -48,7 +48,7 @@ const HW14 = () => {
 
         // добавить/заменить значение в квери урла
         // setSearchParams(
-
+        setSearchParams(value)
         //
     }
 
